@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+<link rel="stylesheet" type="text/css" href="common.css">
+<title>鎮圧くんベータ</title>
+<script type="text/javascript" src="keisan.js"></script>
+</head>
+
+<body>
+<div class="clearfix">
+<div class="title">
+<h1>鎮圧くんベータ</h1>
+</div>
+<div class="ver">
+<p>Ver.0.3</p>
+</div>
+</div>
+</br>
+<div class="clearfix">
+<div class="mein">
+<form name="tinatukeisan"  method="post">
+<div>
+ターン数：<input size="2" type="number" name="tarn" value="1">　
+</div>
+<div>
+職員名前：<input size="10" type="text" name="name">　
+</div>
+<div>
+ステータス種類：<select name="sute">
+<option value="yuki">勇気</option>
+<option value="sintyo">慎重</option>
+<option value="zisei">自制</option>
+<option value="seigi">正義</option>
+</select>
+</div>
+<div>
+<label for="dais">ステータス数値：</label>
+<input type="number" id="dais" name="dais">
+</div>
+<div>
+相手：<select name="teki">
+<option value="1">パニック職員</option>
+<option value="0">-ZAYIN-</option>
+<option value="2">愛ある温もり</option>
+<option value="19">船に留まる少女『アウラ』</option>
+<option value="0">-TETH-</option>
+<option value="3">完璧主義者のメイド</option>
+<option value="4">無色不透明</option>
+<option value="5">チャンディエン</option>
+<option value="6">ドッペルゲンガー</option>
+<option value="0">-HE-</option>
+<option value="7">太陽の欠片</option>
+<option value="0">-WAW-</option>
+<option value="8">執行人Ｉ</option>
+<option value="9">皮だけのアリス</option>
+<option value="10">莞爾の崇拝者</option>
+<option value="11">信義のデュラハン</option>
+<option value="18">静かで大きな海</option>
+<option value="20">狂えるファヴニール</option>
+<option value="21">作品番号432「セラヒム」</option>
+<option value="23">ないない国へ続く窓</option>
+<option value="0">-ALEPH-</option>
+<option value="12">紅蓮</option>
+<option value="13">めでたしめでたし</option>
+<option value="14">枯れた神木</option>
+<option value="15">魅惑の夢の王</option>
+<option value="16">慈愛の女神</option>
+<option value="17">回回回</option>
+<option value="22">深淵</option>
+<option value="24">『ぼうけんのはじまり』</option>
+</select>
+</div>
+<div>
+<label for="pani_name">パニック職員名前：</label>
+<input type="text" id="pani_name" name="pani_name">
+</div>
+<div>
+パニック職員種類：<select name="pani_type">
+<option value="satu">殺人</option>
+<option value="haikai">徘徊</option>
+<option value="zisatu">自殺</option>
+<option value="syato">シャットダウン</option>
+</select>
+</div>
+<div>
+<label for="pani_dais">パニック職員ステータス：</label>
+<input type="number" id="pani_dais" name="pani_dais">
+</div>
+<div>
+<input type="radio" name="pale" value="1">PALE武器
+<input type="radio" name="pale" value="0" checked>PALE以外
+</div>
+<div>
+<input type="radio" name="kanst" value="1">全部カンスト
+<input type="radio" name="kanst" value="0" checked>カンストしてない
+</div>
+<div>
+状況：<select name="BW">
+<option value="0" checked>部門移動中</option>
+<option value="1">交戦中</option>
+</select>
+</div>
+
+<div class="button">
+<input type="button" value="ツイート生成" onclick="calc_sum();">　
+</div>
+</br>
+<textarea name="kekka" cols=40 rows=15></textarea>
+</br>
+<input type="button" value="ツイートする" onclick="tweet();">　
+
+</form>
+</br>
+</div>
+
+
+<div class="help">
+<p>
+動作がおかしい場合はブラウザのキャッシュをクリアすると直る場合があります</br>
+使い方</br>
+1.ターン数を入力</br>
+2.職員の名前を入力</br>
+3.使用するステータスを選択</br>
+4.使用するステータスの値を入力（補正込）</br>
+5.鎮圧相手を選択</br>
+6.（パニック鎮圧時）相手の職員の名前を入力</br>
+7.（パニック鎮圧時）相手のパニックの種類を選択</br>
+8.（ﾄﾞｯﾍﾟﾙｹﾞﾝｶﾞｰ、パニック鎮圧時）相手のステータスを入力（補正込）</br>
+9.職員の装備がPALEかそうでないか選択</br>
+10.職員の全ステータスがカンストしているか選択</br>
+11.ツイート生成を押す</br>
+12.コピーペーストする</br>
+</br>
+注意</br>
+これはベータ版、つまり未完成です</br>
+枯れた神木、慈愛の女神、静かで大きな海の攻撃の詳細が分からないので特殊攻撃が載ってないです</br>
+深淵の引きずりこみ攻撃、魅惑の夢の王の２ターン毎PALEは載っていません</br>
+紅蓮の「１の位が8だとダメージ1.5倍」ファヴニールの「勇気、自制-20」未実装</br>
+2020/08/28 ver0.3　経理チーム追加、カンスト職員の成否を分かりやすく表示するように</br>
+2020/08/23 ver0.2a　カンスト処理がONOFF逆だったので修正</br>
+2020/08/23 ver0.2　部門移動中、保存チーム、皮だけのアリスの特殊攻撃、ドッペルゲンガーの敵対数値追加</br>
+2020/08/20 ver0.1公開</br>
+
+</p>
+</div>
+</div>
+</body>
+</html>
