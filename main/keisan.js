@@ -1,4 +1,9 @@
-﻿function calc_sum(){
+window.onload = function(){
+rog=["log"];
+
+}
+
+function calc_sum(){
 tarn = parseInt(document.tinatukeisan['tarn'].value);
 name = document.tinatukeisan['name'].value;
 sute = document.tinatukeisan['sute'].value;
@@ -14,6 +19,8 @@ pani_sute = parseInt(document.tinatukeisan['pani_dais'].value);
 pale = document.tinatukeisan['pale'].value;
 kanst = document.tinatukeisan['kanst'].value;
 
+hiduke = new Date();
+twetext="";
 
 Esute = 0;
 
@@ -40,6 +47,9 @@ dame=0;
 dame1=0;
 dame2=0;
 dame3=0;
+
+
+rogcount=rog.length+1;
 
 ECid=[0,999,29,01,37,50,39,22,15,45,34,32,19,09,20,21,03,23,36,60,44,43,10,13,59];
 ECname=["無効","pani_name","愛ある温もり","完璧主義者のメイド","無色不透明","チャンディエン","ドッペルゲンガー","太陽の欠片","執行人Ｉ","皮だけのアリス","莞爾の崇拝者","信義のデュラハン","紅蓮","めでたしめでたし","枯れた神木","魅惑の夢の王","慈愛の女神","回回回","静かで大きな海","アウラ","狂えるファヴニール","「セラヒム」","深淵","永遠の子供","魔王"];
@@ -229,14 +239,17 @@ if(dame3 >=1){
 
 }
 
+dise_log();
 
 if(bumon==0){
 document.tinatukeisan['kekka'].value ="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" +"部門移動中、ターン" + tarn + "終了";
+twetext="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" +"部門移動中、ターン" + tarn + "終了";
 return false;
 
 }else{
 
 document.tinatukeisan['kekka'].value ="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" + Hsute +  dais + ":" + Mdeme + Mkurifan + kansei +"\n"  + "相手" + Esute + ":" + Edeme + Ekurifan + "\n" + goukei + double + damehyo +tokusyu+damehyo3+ sokusi + "\n" + "ターン" + tarn + "終了";
+twetext="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" + Hsute +  dais + ":" + Mdeme + Mkurifan + kansei +"\n"  + "相手" + Esute + ":" + Edeme + Ekurifan + "\n" + goukei + double + damehyo +tokusyu+damehyo3+ sokusi + "\n" + "ターン" + tarn + "終了";
 return false;
 
 }
@@ -247,12 +260,29 @@ return false;
 
 }
 
-function tweet(){
+function openTwitter(tarn,name,Hteki,Hsute,dais,Mdeme,Mkurifan,kansei,Esute,Edeme,Ekurifan,goukei,double,damehyo,tokusyu,damehyo3,sokusi) {
 
-  confirm('未実装です、お手数ですがコピペしてください')
+var turl = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(twetext);
+window.open(turl,'_blank');
 }
 
+function dise_log(){
 
+  for( i=1 ;i<rogcount; i++){
+    if(rog[i]==null){
+      if(bumon==0){
+        rog[i]="<li>Tarn"+tarn+":移動中"+":"+hiduke.toLocaleString()+"</li>";
+
+      }else{
+        rog[i]="<li>Tarn"+tarn+":自分"+ Mdeme +"("+ kansei +")"+":相手"+ Edeme+":"+damehyo +tokusyu+damehyo3+ sokusi +":"+hiduke.toLocaleString()+"</li>";
+}
+    }
+}
+rogtext =rog.join("");
+target = document.getElementById("comelog");
+target.innerHTML = rogtext;
+rogcount+=1;
+}
 
 
 
