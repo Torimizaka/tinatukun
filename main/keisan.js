@@ -461,29 +461,19 @@ tokusyu="部門全体に2d6白";
 if(ransu ==2){
 dame1 = Math.floor( Math.random() * 6 +1);
 dame2 = Math.floor( Math.random() * 6 +1);
-dame = Math.round((dame1 + dame2)*1.5);
+dame = Math.round((dame1 + dame2)*2);
 tokusyu ="白";
 }
 if(Dhan == 1){if(Mfan == 1){
 dame1 = Math.floor( Math.random() * 6 +1);
 dame2 = Math.floor( Math.random() * 6 +1);
-dame = Math.round((dame1 + dame2)*2*1.5);
+dame = Math.round((dame1 + dame2)*2*2);
 tokusyu ="白";
 }}
 }
 if(ransu ==3){
-if(Dhan == 1){
-dame1 = Math.floor( Math.random() * 6 +1);
-dame2 = Math.floor( Math.random() * 6 +1);
-dame = (dame1 + dame2)*2;
-tokusyu ="白";
-}
-if(Dhan == 1){if(Mfan == 1){
-dame1 = Math.floor( Math.random() * 6 +1);
-dame2 = Math.floor( Math.random() * 6 +1);
-dame = (dame1 + dame2)*2*2;
-tokusyu ="白";
-}}
+  dame = 0;
+  tokusyu ="殺人性パニック";
 }
 
 }
