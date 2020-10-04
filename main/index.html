@@ -14,138 +14,155 @@
 <h1>鎮圧くんベータ</h1>
 </div>
 <div class="ver">
-<p>Ver.0.6a</p>
+<p>Ver.0.7a</p>
 </div>
 </div>
 </br>
 <div class="clearfix">
 <div class="mein">
-<form name="tinatukeisan"  method="post">
-<div>
-ターン数：<input size="2" type="number" name="tarn" value="1">　
-</div>
-<div>
-職員名前：<input size="10" type="text" name="name">　
-</div>
-<div>
-ステータス種類：<select name="sute">
-<option value="yuki">勇気</option>
-<option value="sintyo">慎重</option>
-<option value="zisei">自制</option>
-<option value="seigi">正義</option>
-</select>
-</div>
-<div>
-<label for="dais">ステータス数値：</label>
-<input type="number" id="dais" name="dais">
-</div>
-<div>
-相手：<select name="teki">
-    <option value="1">Lv1パニック職員</option>
-    <option value="1002">Lv2パニック職員</option>
-    <option value="1003">Lv3パニック職員</option>
-    <option value="1004">Lv4パニック職員</option>
-    <option value="1005">Lv5パニック職員</option>
-    <option value="0">-ZAYIN-</option>
-    <option value="2">愛ある温もり</option>
-    <option value="19">船に留まる少女『アウラ』</option>
-    <option value="0">-TETH-</option>
-    <option value="3">完璧主義者のメイド</option>
-    <option value="4">無色不透明</option>
-    <option value="5">チャンディエン</option>
-    <option value="6">ドッペルゲンガー</option>
-    <option value="37">狂信の科学者</option>
-    <option value="39">悲哀の枝</option>
-    <option value="41">燐火</option>
-    <option value="45">インク瓶</option>
-    <option value="0">-HE-</option>
-    <option value="7">太陽の欠片</option>
-    <option value="29">共鳴する影</option>
-    <option value="33">悪魔の眷属</option>
-    <option value="40">露骨にキノコ</option>
-    <option value="0">-WAW-</option>
-    <option value="8">執行人Ｉ</option>
-    <option value="9">皮だけのアリス</option>
-    <option value="10">莞爾の崇拝者</option>
-    <option value="11">信義のデュラハン</option>
-    <option value="18">静かで大きな海</option>
-    <option value="20">狂えるファヴニール</option>
-    <option value="21">作品番号432「セラヒム」</option>
-    <option value="23">ないない国へ続く窓</option>
-    <option value="26">切り絵</option>
-    <option value="30">高塔の陽炎</option>
-    <option value="31">マヨイビト</option>
-    <option value="35">守衛α</option>
-    <option value="36">守衛β</option>
-    <option value="42">五光</option>
-    <option value="43">夜光</option>
-    <option value="46">巡る思考</option>
-    <option value="48">白日の影法師</option>
-    <option value="0">-ALEPH-</option>
-    <option value="12">紅蓮</option>
-    <option value="13">めでたしめでたし</option>
-    <option value="14">枯れた神木</option>
-    <option value="15">魅惑の夢の王</option>
-    <option value="16">慈愛の女神</option>
-    <option value="17">回回回</option>
-    <option value="22">深淵</option>
-    <option value="24">『ぼうけんのはじまり！』</option>
-    <option value="25">理想の魔法少女になってよ！</option>
-    <option value="32">喰心の悪魔</option>
-    <option value="34">夢幻泡沫</option>
-    <option value="38">崇拝の色彩</option>
-    <option value="44">遠き日の復讐者</option>
-    <option value="47">『！』</option>
-    <option value="27">たいふう</option>
-    <option value="28">怪物の子</option>
-</select>
-</div>
-<div>
-<label for="pani_name">パニック職員名前：</label>
-<input type="text" id="pani_name" name="pani_name">
-</div>
-<div>
-パニック職員種類：<select name="pani_type">
-<option value="satu">殺人</option>
-<option value="haikai">徘徊</option>
-<option value="zisatu">自殺</option>
-<option value="syato">シャットダウン</option>
-</select>
-</div>
-<div>
-<label for="pani_dais">パニック職員ステータス：</label>
-<input type="number" id="pani_dais" name="pani_dais">
-</div>
-<div>
-<input type="radio" name="pale" value="1">PALE武器
-<input type="radio" name="pale" value="0" checked>PALE以外
-</div>
-<div>
-<input type="radio" name="kanst" value="1">全部カンスト
-<input type="radio" name="kanst" value="0" checked>カンストしてない
-</div>
-<div>
-    部門：<select name="geigeki">
-        <option value="0" checked>迎撃以外</option>
-        <option value="1">迎撃</option>
-    </select>
-</div>
-<div>
-状況：<select name="BW">
-<option value="0" checked>部門移動中</option>
-<option value="1">交戦中</option>
-</select>
-</div>
+    <form name="tinatukeisan" method="post">
+        <div>
+            ターン数：<input size="2" type="number" name="tarn" value="1">
+        </div>
+        <div>
+            職員名前：<input size="10" type="text" name="name">
+        </div>
+        <div>
+            ステータス種類：<select name="sute">
+                <option value="yuki">勇気</option>
+                <option value="sintyo">慎重</option>
+                <option value="zisei">自制</option>
+                <option value="seigi">正義</option>
+            </select>
+        </div>
+        <div>
+            <label for="dais">ステータス数値：</label>
+            <input type="number" id="dais" name="dais">
+        </div>
+        <div>
+            相手：<select name="teki">
+                <option value="1">Lv1パニック職員</option>
+                <option value="1002">Lv2パニック職員</option>
+                <option value="1003">Lv3パニック職員</option>
+                <option value="1004">Lv4パニック職員</option>
+                <option value="1005">Lv5パニック職員</option>
+                <option value="0">-ZAYIN-</option>
+                <option value="2">愛ある温もり</option>
+                <option value="19">船に留まる少女『アウラ』</option>
+                <option value="0">-TETH-</option>
+                <option value="3">完璧主義者のメイド</option>
+                <option value="4">無色不透明</option>
+                <option value="5">チャンディエン</option>
+                <option value="6">ドッペルゲンガー</option>
+                <option value="37">狂信の科学者</option>
+                <option value="39">悲哀の枝</option>
+                <option value="41">燐火</option>
+                <option value="45">インク瓶</option>
+                <option value="51">劣等星</option>
+                <option value="0">-HE-</option>
+                <option value="7">太陽の欠片</option>
+                <option value="29">共鳴する影</option>
+                <option value="33">悪魔の眷属</option>
+                <option value="40">露骨にキノコ</option>
+                <option value="52">落ちる獣</option>
+                <option value="53">異界駅</option>
+                <option value="54">不羈の家畜</option>
+                <option value="56">シュレーディンガーの猟犬（子犬）</option>
+                <option value="0">-WAW-</option>
+                <option value="8">執行人Ｉ</option>
+                <option value="9">皮だけのアリス</option>
+                <option value="10">莞爾の崇拝者</option>
+                <option value="11">信義のデュラハン</option>
+                <option value="18">静かで大きな海</option>
+                <option value="20">狂えるファヴニール</option>
+                <option value="21">作品番号432「セラヒム」</option>
+                <option value="23">ないない国へ続く窓</option>
+                <option value="26">切り絵</option>
+                <option value="30">高塔の陽炎</option>
+                <option value="31">マヨイビト</option>
+                <option value="35">守衛α</option>
+                <option value="36">守衛β</option>
+                <option value="42">五光</option>
+                <option value="43">夜光</option>
+                <option value="46">巡る思考</option>
+                <option value="48">白日の影法師</option>
+                <option value="50">隠遁の花守</option>
+                <option value="55">亡霊武者</option>
+                <option value="0">-ALEPH-</option>
+                <option value="12">紅蓮</option>
+                <option value="13">めでたしめでたし</option>
+                <option value="14">枯れた神木</option>
+                <option value="15">魅惑の夢の王</option>
+                <option value="16">慈愛の女神</option>
+                <option value="17">回回回</option>
+                <option value="22">深淵</option>
+                <option value="24">『ぼうけんのはじまり！』</option>
+                <option value="25">理想の魔法少女になってよ！</option>
+                <option value="32">喰心の悪魔</option>
+                <option value="34">夢幻泡沫</option>
+                <option value="38">崇拝の色彩</option>
+                <option value="44">遠き日の復讐者</option>
+                <option value="47">『！』</option>
+                <option value="49">穢れた同上</option>
+                <option value="57">シュレーディンガーの猟犬（本来）</option>
+                <option value="27">たいふう</option>
+                <option value="28">怪物の子</option>
 
-<div class="button">
-<input type="button" value="ツイート生成" onclick="calc_sum();">　
+            </select>
+        </div>
+        <div>
+           <b> 鎮圧手伝い：</b>
+    <input type="checkbox" class="irai" value="1">子猫蝶
+    <input type="checkbox" class="irai" value="2">執行人Ｉ
+    <input type="checkbox" class="irai" value="3">デュラハン
+    <input type="checkbox" class="irai" value="4">花守
 </div>
-</br>
+        <div>
+            <label for="pani_name">パニック職員名前：</label>
+            <input type="text" id="pani_name" name="pani_name">
+        </div>
+        <div>
+            パニック職員種類：<select name="pani_type">
+                <option value="satu">殺人</option>
+                <option value="haikai">徘徊</option>
+                <option value="zisatu">自殺</option>
+                <option value="syato">シャットダウン</option>
+            </select>
+        </div>
+        <div>
+            <label for="pani_dais">パニック職員ステータス：</label>
+            <input type="number" id="pani_dais" name="pani_dais">
+        </div>
+        <div>
+            <input type="radio" name="pale" value="1">PALE武器
+            <input type="radio" name="pale" value="0" checked>PALE以外
+        </div>
+        <div>
+            <input type="radio" name="kanst" value="1">全部カンスト
+            <input type="radio" name="kanst" value="0" checked>カンストしてない
+        </div>
+        <div>
+            部門：<select name="geigeki">
+                <option value="0" checked>迎撃以外</option>
+                <option value="1">迎撃</option>
+            </select>
+        </div>
+        <div>
+            状況：<select name="BW">
+                <option value="0" checked>部門移動中</option>
+                <option value="1">交戦中</option>
+            </select>
+        </div>
+
+        <div class="button">
+            <input type="button" value="ツイート生成" onclick="calc_sum();">
+        </div>
+        </br>
 <textarea name="kekka" cols=40 rows=15></textarea>
-</br>
-<input type="button" value="ツイートする" onclick="openTwitter();">　
+        </br>
+        <input type="button" value="ツイートする" onclick="openTwitter();">
 
-</form>
+    </form>
 </br>
 <ul>
 <div id="comelog"></div>
@@ -178,6 +195,8 @@
         紅蓮の「１の位が8だとダメージ1.5倍」ファヴニールの「勇気、自制-20」未実装</br>
         突貫なのでプログラムと迎撃の幻想体の特殊能力未実装</br></br>
         更新履歴</br>
+        2020/10/04 ver0.7a　依頼ノマ仮実装　とりあえずテストなので４体だけです
+        2020/10/04 ver0.7　中央上下追加、五光・夜光の反射と回避追加、パニック時に両成功表示、内部処理の変更（成否判定の出し方を変えました、ちゃんとダメージが表示されるようになったはず）</br>
         2020/10/04 ver0.6a　悲哀の枝、びっくりくんが選択できなかった問題解決、部門移動時に「！！」が表示されるように　あとツイート画面を新規タブで開くように</br>
         2020/09/25 ver0.6　喰心の悪魔がWAWにいたのを修正、パニック職員のランク分け追加、護衛・管理室・コントロール・情報・教育・安全の幻想体追加</br>
         2020/09/15 ver0.5b　職員側のダイスがステータスに関わらず一律1d100だと勘違いしていたのを修正</br>
