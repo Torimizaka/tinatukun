@@ -55,6 +55,7 @@ dame1=0;
 dame2=0;
 dame3=0;
 
+    daissyu = 0;
 
 rogcount=rog.length+1;
 
@@ -77,8 +78,42 @@ Esute=pani_sute;
         geican = 1;
     }
 
+    
+
+    if (dais <= 30) {
+        daissyu = 1;
+    } else {
+        if (dais <= 50) {
+            daissyu = 2;
+        } else {
+
+            daissyu = 0;
+
+        }
+
+    }
+    Edeme = Math.floor(Math.random() * 100);
+    if (daissyu == 0) {
+
 Mdeme = Math.floor( Math.random() * 100);
-Edeme = Math.floor( Math.random() * 100);
+
+
+
+    }
+    if (daissyu == 1) {
+
+        Mdeme = Math.floor(Math.random() * 30);
+
+
+    }
+    if (daissyu == 2) {
+
+        Mdeme = Math.floor(Math.random() * 50);
+
+
+    }
+
+
 
 Hsute="" ;
 Hteki="" ;
@@ -128,6 +163,10 @@ ransu=0;
 tokusyu="";
 
     if (number == 0) f_panisyo();
+    if (number == 1002) f_panisyo2();
+    if (number == 1003) f_panisyo3();
+    if (number == 1004) f_panisyo4();
+    if (number == 1005) f_panisyo5();
     if (number == 1) f_panisyo();
     if (number == 2) f_Z29();
     if (number == 3) f_Z01();
@@ -161,6 +200,21 @@ tokusyu="";
     if (number == 31) f_Z04();
     if (number == 32) f_Z42a();
     if (number == 33) f_Z42b();
+    if (number == 34) f_Z47a();
+    if (number == 35) f_Z47b();
+    if (number == 36) f_Z47c();
+    if (number == 37) f_Z52();
+    if (number == 38) f_Z18();
+    if (number == 39) f_Z37();
+    if (number == 40) f_O83();
+    if (number == 41) f_O93();
+    if (number == 42) f_O69();
+    if (number == 43) f_O64();
+    if (number == 44) f_O95();
+    if (number == 45) f_O97();
+    if (number == 46) f_O74();
+    if (number == 47) f_O78();
+    if (number == 48) f_O107();
 
 
 if(Mdeme >=96){
@@ -276,7 +330,12 @@ double = "２回攻撃";
 Dhan = 0;
 }}}
 
-if(number　== 0) f_panisyo();
+    if (number == 0) f_panisyo();
+
+    if (number == 1002) f_panisyo2();
+    if (number == 1003) f_panisyo3();
+    if (number == 1004) f_panisyo4();
+    if (number == 1005) f_panisyo5();
 if(number　== 1) f_panisyo();
 if(number　== 2) f_Z29();
 if(number　== 3) f_Z01();
@@ -310,6 +369,21 @@ if(number　== 23) f_Z13();
     if (number == 31) f_Z04();
     if (number == 32) f_Z42a();
     if (number == 33) f_Z42b();
+    if (number == 34) f_Z47a();
+    if (number == 35) f_Z47b();
+    if (number == 36) f_Z47c();
+    if (number == 37) f_Z52();
+    if (number == 38) f_Z18();
+    if (number == 39) f_Z37();
+    if (number == 40) f_O83();
+    if (number == 41) f_O93();
+    if (number == 42) f_O69();
+    if (number == 43) f_O64();
+    if (number == 44) f_O95();
+    if (number == 45) f_O97();
+    if (number == 46) f_O74();
+    if (number == 47) f_O78();
+    if (number == 48) f_O107();
 
 
     if ((geihan % 2) == 0) {
@@ -330,8 +404,8 @@ if(dame3 >=1){
 dise_log();
 
 if(bumon==0){
-document.tinatukeisan['kekka'].value ="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" +"部門移動中、ターン" + tarn + "終了";
-twetext="@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン"+ tarn + "\n" +  name + "→" + Hteki + "\n" +"部門移動中、ターン" + tarn + "終了";
+    document.tinatukeisan['kekka'].value = "@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン" + tarn + "\n" + name + "→" + Hteki + "\n" +"‼️ 部門移動中、ターン" + tarn + "終了";
+    twetext = "@DeusEXZZZ12\n#Z社_鎮圧ロール \nターン" + tarn + "\n" + name + "→" + Hteki + "\n" +"‼️ 部門移動中、ターン" + tarn + "終了";
 return false;
 
 }else{
@@ -351,7 +425,7 @@ return false;
 function openTwitter(tarn,name,Hteki,Hsute,dais,Mdeme,Mkurifan,kansei,Esute,Edeme,Ekurifan,goukei,double,damehyo,tokusyu,damehyo3,sokusi) {
 
 var turl = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(twetext);
-window.open(turl,'_blank');
+window.open(turl);
 }
 
 function dise_log(){
@@ -383,6 +457,69 @@ dame = Math.floor( Math.random() * 4 +1);
 if(Dhan == 1){if(Mfan == 1){
 dame = Math.floor( Math.random() * 4 +1)*2;
 }}
+}
+function f_panisyo2() {
+    Hteki = pani_name;
+    Esute = pani_sute;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 4 + 1);
+        dame2 = Math.floor(Math.random() * 4 + 1);
+        dame = (dame1 + dame2);
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 4 + 1);
+            dame2 = Math.floor(Math.random() * 4 + 1);
+            dame = (dame1 + dame2) * 2;
+        }
+    }
+    
+}
+function f_panisyo3() {
+    Hteki = pani_name;
+    Esute = pani_sute;
+    if (Dhan == 1) {
+        dame = Math.floor(Math.random() * 10 + 1);
+        
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame = Math.floor(Math.random() * 10 + 1) * 2;
+           
+        }
+    }
+}
+function f_panisyo4() {
+    Hteki = pani_name;
+    Esute = pani_sute;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+           
+        }
+    }
+}
+function f_panisyo5() {
+    Hteki = pani_name;
+    Esute = pani_sute;
+    if (Dhan == 1) {
+        dame = Math.floor(Math.random() * 20 + 1);
+     
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame = Math.floor(Math.random() * 20 + 1) * 2;
+          
+        }
+    }
 }
 
 function f_Z29(){
@@ -948,6 +1085,343 @@ function f_Z42b() {
         if (Mfan == 1) {
             dame = Math.floor(Math.random() * 10 + 1) * 2;
             tokusyu = "黒";
+        }
+    }
+}
+
+function f_Z47a() {
+    Hteki = "夢幻泡沫";
+    Esute = 60;
+    ransu = Math.floor(Math.random() * 2 + 1);
+    if (ransu == 1) {
+        if (Dhan == 1) {
+            dame = Math.floor(Math.random() * 20 + 1);
+            tokusyu = "赤";
+        }
+        if (Dhan == 1) {
+            if (Mfan == 1) {
+                dame = Math.floor(Math.random() * 20 + 1) * 2;
+                tokusyu = "赤";
+            }
+        }
+    } else {
+        if (Dhan == 1) {
+            dame = Math.floor(Math.random() * 20 + 1);
+            tokusyu = "黒";
+        }
+        if (Dhan == 1) {
+            if (Mfan == 1) {
+                dame = Math.floor(Math.random() * 20 + 1) * 2;
+                tokusyu = "黒";
+            }
+        }
+    }
+
+}
+function f_Z47b() {
+    Hteki = "守衛α";
+    Esute = 55;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_Z47c() {
+    Hteki = "守衛β";
+    Esute = 55;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_Z52() {
+    Hteki = "狂信の科学者";
+    Esute = 30;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 4 + 1);
+        dame2 = Math.floor(Math.random() * 4 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 4 + 1);
+            dame2 = Math.floor(Math.random() * 4 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_Z18() {
+    Hteki = "崇拝の色彩";
+    Esute = 62;
+    if (Dhan == 1) {
+        dame = Math.floor(Math.random() * 20 + 1);
+        tokusyu = "色";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame = Math.floor(Math.random() * 20 + 1) * 2;
+            tokusyu = "色";
+        }
+    }
+}
+function f_Z37() {
+    Hteki = "悲哀の枝";
+    Esute = 30;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 4 + 1);
+        dame2 = Math.floor(Math.random() * 4 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "白";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 4 + 1);
+            dame2 = Math.floor(Math.random() * 4 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "白";
+        }
+    }
+}
+function f_O83() {
+    Hteki = "露骨にキノコ";
+    Esute = 40;
+    if (Dhan == 1) {
+        dame = Math.floor(Math.random() * 10 + 1);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame = Math.floor(Math.random() * 10 + 1) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_O93() {
+    Hteki = "燐火";
+    Esute = 30;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 4 + 1);
+        dame2 = Math.floor(Math.random() * 4 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "白";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 4 + 1);
+            dame2 = Math.floor(Math.random() * 4 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "白";
+        }
+    }
+}
+function f_O69() {
+    Hteki = "五光";
+    Esute = 48;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "赤";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "赤";
+        }
+    }
+}
+function f_O64() {
+    Hteki = "夜光";
+    Esute = 55;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "赤";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "赤";
+        }
+    }
+}
+function f_O95() {
+    Hteki = "遠き日の復讐者";
+    Esute = 75;
+    if (Edeme == 66) {
+        sokusi = "パニック";
+    }
+    if (seike <= 0) {
+        ransu = Math.floor(Math.random() * 6 + 1);
+        if (ransu == 1) {
+            if (Dhan == 1) {
+                dame = Math.floor(Math.random() * 20 + 1);
+                tokusyu = "赤";
+            }
+            if (Dhan == 1) {
+                if (Mfan == 1) {
+                    dame = Math.floor(Math.random() * 20 + 1) * 2;
+                    tokusyu = "赤";
+                }
+            }
+        } else {
+            if (ransu == 2) {
+                if (Dhan == 1) {
+                    dame = Math.floor(Math.random() * 20 + 1);
+                    tokusyu = "白";
+                }
+                if (Dhan == 1) {
+                    if (Mfan == 1) {
+                        dame = Math.floor(Math.random() * 20 + 1) * 2;
+                        tokusyu = "白";
+                    }
+                }
+            } else {
+                if (ransu == 3) {
+                    if (Dhan == 1) {
+                        dame = Math.floor(Math.random() * 20 + 1);
+                        tokusyu = "黒";
+                    }
+                    if (Dhan == 1) {
+                        if (Mfan == 1) {
+                            dame = Math.floor(Math.random() * 20 + 1) * 2;
+                            tokusyu = "黒";
+                        }
+                    }
+                } else {
+                    if (ransu == 4) {
+                        if (Dhan == 1) {
+                            dame = Math.floor(Math.random() * 20 + 1);
+                            tokusyu = "黒全体";
+                        }
+                        if (Dhan == 1) {
+                            if (Mfan == 1) {
+                                dame = Math.floor(Math.random() * 20 + 1) * 2;
+                                tokusyu = "黒全体";
+                            }
+                        }
+                    } else {
+                        if (ransu == 5) {
+                            if (Dhan == 1) {
+                                dame = 0;
+                                tokusyu = "青";
+                            }
+                            if (Dhan == 1) {
+                                if (Mfan == 1) {
+                                    dame = 0;
+                                    tokusyu = "即死";
+                                }
+                            }
+                        } else {
+                            if (Dhan == 1) {
+                                dame = 0;
+                                tokusyu = "青全体";
+                            }
+                            if (Dhan == 1) {
+                                if (Mfan == 1) {
+                                    dame = 0;
+                                    tokusyu = "青全体、自分即死";
+                                }
+                            }
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+function f_O97() {
+    Hteki = "インク瓶";
+    Esute = 20;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 4 + 1);
+        dame2 = Math.floor(Math.random() * 4 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 4 + 1);
+            dame2 = Math.floor(Math.random() * 4 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_O74() {
+    Hteki = "巡る思考";
+    Esute = 50;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_O78() {
+    Hteki = "『！』";
+    Esute = 60;
+    if (Dhan == 1) {
+        dame = Math.floor(Math.random() * 20 + 1);
+        tokusyu = "黒";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame = Math.floor(Math.random() * 20 + 1) * 2;
+            tokusyu = "黒";
+        }
+    }
+}
+function f_O107() {
+    Hteki = "白日の影法師";
+    Esute = 54;
+    if (Dhan == 1) {
+        dame1 = Math.floor(Math.random() * 6 + 1);
+        dame2 = Math.floor(Math.random() * 6 + 1);
+        dame = (dame1 + dame2);
+        tokusyu = "白";
+    }
+    if (Dhan == 1) {
+        if (Mfan == 1) {
+            dame1 = Math.floor(Math.random() * 6 + 1);
+            dame2 = Math.floor(Math.random() * 6 + 1);
+            dame = (dame1 + dame2) * 2;
+            tokusyu = "白";
         }
     }
 }
