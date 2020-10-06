@@ -1,0 +1,51 @@
+
+*{
+    font-size:16px;
+
+}
+
+h1{
+margin:0;
+font-size:20px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.title{
+float:left
+}
+.ver{
+float:left
+}
+
+@media screen and (max-width: 959px) {
+    .mein {
+        width: 900px;
+        float: left;
+    }
+
+    .help {
+        width: 900px 
+    }
+
+    #comelog {
+        width: 900px;
+    }
+}
+.mein{
+width:550px;
+float:left;
+}
+.help{
+width:600px;
+float:left;
+}
+#comelog{
+width:600px;
+
+}
+
+
